@@ -42,5 +42,7 @@ for count, item in enumerate(cnpjs, start=1):
         lista_logs.append(f"O CNPJ: {cnpj} não é valido!... {e}")
     sleep(21)
 
-
-transporte_planilha(lista_logs)
+try:
+    transporte_planilha(lista_logs)
+except Exception as e: 
+    print("limpe a segunda coluna da planilha")
